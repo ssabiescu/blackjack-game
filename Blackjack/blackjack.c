@@ -280,13 +280,12 @@ void play() {
                     dealer_cards[cnt_dealer] = getCard(); dealer_hits++;
                     dealer_score += getScore(dealer_cards[cnt_dealer], player_score);
 
-                    printf("\n    dealer hit (#%d) .", dealer_hits); Sleep(300); printf(" ."); Sleep(300); printf(" .");
+                    printf("\n    dealer hit (#%d) .", dealer_hits); 
                     printf(" : %s ", dealer_cards[cnt_dealer]);
 
                     getSymbol(dealer_colours[cnt_dealer]);
                     printf(" (score: %d) \n", dealer_score);
                     dealer_colours[cnt_dealer++] = getColour();
-                    Sleep(100);
                 }
                 if (dealer_score > 21) {
                     printf("\x1B[32m    Dealer bust. You won! \n \033[0m");
